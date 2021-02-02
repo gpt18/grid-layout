@@ -149,6 +149,7 @@ body {
 }
 
 .item {
+    border-radius: 6px;
     height: 100px;
     background-color: #21262d;
     border: 1px solid;
