@@ -18,8 +18,8 @@ body {
 .main {
     padding: 8px;
     color: #c9d1d9;
-    background-color: #0d1117;
-    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid;
+    border-color: #30363d;
     border-radius: 6px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
 }
@@ -126,6 +126,7 @@ body {
     text-decoration: none;
     border-color: #30363d;
     background-color: #21262d;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
     transition: .2s cubic-bezier(0.3, 0, 0.5, 1);
 }
 
