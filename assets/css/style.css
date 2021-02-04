@@ -15,9 +15,8 @@ body {
     margin: 0 auto;
 }
 
-.main {
+.border {
     padding: 8px;
-    color: #c9d1d9;
     border: 1px solid;
     border-color: #30363d;
     border-radius: 6px;
@@ -27,52 +26,50 @@ body {
 .main-container {
     display: grid;
     height: 100vh;
-    grid-template-rows: auto auto 1fr auto auto auto;
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-areas: "header" "path" "main" "sidebar" "footer";
     gap: 10px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.path {
+    grid-area: path;
+}
+
+.main {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.ads {
+    grid-area: ads;
+    display: none;
+}
+
+.footer {
+    grid-area: footer;
 }
 
 @media(min-width: 720px) {
     .main-container {
-        grid-template-columns: repeat(12, 1fr);
         grid-template-rows: auto auto 1fr auto;
-    }
-    .main.header {
-        grid-column: 1 / span 12;
-    }
-    .main.nav {
-        grid-column: 3 / span 10;
-    }
-    .main.body {
-        grid-column: 3 / span 10;
-    }
-    .main.sidebar {
-        grid-column: 1 / span 2;
-        grid-row: 2 / span 2;
-    }
-    .main.ads {
-        grid-column: 1 / span 2;
-    }
-    .main.footer {
-        grid-column: 3 / span 10;
+        grid-template-areas: "header header header" "path path sidebar" "main main sidebar" "footer footer footer";
     }
 }
 
 @media(min-width: 1020px) {
-    .main.nav {
-        grid-column: 3 / span 8;
+    .main-container {
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas: "header header header header" "sidebar path path ads" "sidebar main main ads" "footer footer footer footer";
     }
-    .main.body {
-        grid-column: 3 / span 8;
-    }
-    .main.sidebar {
-        grid-row: 2 / 4;
-    }
-    .main.ads {
-        grid-column: 11 / span 2;
-        grid-row: 2 / 4;
-    }
-    .main.footer {
-        grid-column: 1 / span 12;
+    .ads {
+        display: block;
     }
 }
 
@@ -149,17 +146,13 @@ body {
 }
 
 .item {
-    border-radius: 6px;
     height: 100px;
     background-color: #21262d;
-    border: 1px solid;
-    border-color: #30363d;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
     transition: .2s cubic-bezier(0.3, 0, 0.5, 1);
 }
 
 .item-container {
     display: grid;
     gap: 24px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
