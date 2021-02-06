@@ -187,6 +187,10 @@ body {
     flex-wrap: nowrap;
 }
 
+.item a {
+    text-decoration: none;
+}
+
 .clg-logo {
     overflow: hidden;
     border-radius: 8px;
@@ -202,7 +206,6 @@ body {
 .clg-name {
     font-size: 25px;
     font-weight: 600;
-    text-decoration: none;
     color: var(--color-active-btn-text);
 }
 
