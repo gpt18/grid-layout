@@ -182,45 +182,46 @@ body {
     background-color: var(--color-bg-primary);
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
     transition: .2s cubic-bezier(0.3, 0, 0.5, 1);
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
-.item .bl {
-    display: inline-block;
-}
-
-.clg-icon .img {
-    width: 100px;
-    height: 100px;
-    display: block;
-}
-
-.clg-icon {
+.clg-logo {
     overflow: hidden;
-    position: relative;
     border-radius: 8px;
-    text-decoration: none;
-    width: 100px;
+    margin-right: 8px;
+    width: 95px;
     height: 100%;
-    display: block;
     background-color: var(--color-active-btn-text);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .clg-name {
-    position: relative;
     font-size: 25px;
-    text-align: left;
+    font-weight: 600;
     text-decoration: none;
-    width: 200px;
-    height: 100%;
-    display: block;
     color: var(--color-active-btn-text);
+}
+
+.clg-description {
+    font-size: 14px;
+    color: var(--btn-hr-br-color);
+    text-decoration: none;
+    width: 100%;
+    align-items: center;
 }
 
 .item-container {
     display: grid;
     gap: 24px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+}
+
+.item-bg {
+    background-color: var(--color-bg-primary);
 }
 
 .title {
