@@ -213,8 +213,6 @@ body {
     font-size: 14px;
     color: var(--btn-hr-br-color);
     text-decoration: none;
-    width: 100%;
-    align-items: center;
 }
 
 .item-container {
